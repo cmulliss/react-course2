@@ -12,17 +12,17 @@
         "es6": true
     },
     "rules": {
-        "indent": [4, "tab"],
         "comma-dangle": [
             "error",
             "never"
         ],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-indent": [4, 0],
         "no-unused-vars": [
             "error",
             {
                 "vars": "local",
-                "args": "none",
-                "indent": ["error", "tab"]
+                "args": "none"
             }
         ]
     }
