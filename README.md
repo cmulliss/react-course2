@@ -63,8 +63,10 @@ https://mead.io/eslint/?utm_source=udemy&utm_campaign=eslint&utm_content=educati
   "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/jsx-indent": [4, 0],
   ```
-  - /Users/cherry/Documents/repos/react-course2/indecison-app/.eslintrc: Configuration for rule "react/jsx-indent" is invalid: Severity should be one of the following: 0 = off, 1 = warn, 2 = error (you passed '4')
-  - so need to change this to 0
-  - 
+  - /Users/cherry/Documents/repos/react-course2/indecison-app/.eslintrc: Configuration for rule "react/jsx-indent" is invalid: Severity should be one of the following: 0 = off, 1 = warn, 2 = error (you passed '4').
+
+- jsx does not have built in data binding
+- we don't render anything to the screen until we call ReactDOM.render
+- 
   
 
