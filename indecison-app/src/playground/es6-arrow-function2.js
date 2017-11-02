@@ -10,9 +10,16 @@ const user = {
     name: 'Motley',
     cities: ['Bristol', 'Wells', 'St Davids'],
     printPlacesVisited() {
-        return this.cities.map((city) => {
-            return this.name + ' has visited ' + city + '!';
-        });
+        return this.cities.map((city) => this.name + ' has visited ' + city + '!')
     }
-};
+}
 console.log(user.printPlacesVisited());
+
+const multiplier = {
+    numbers: [1, 2, 3, 4, 5],
+    multiplyBy: 3,
+    multiply() {
+        return this.numbers.map((number) => (number * this.multiplyBy)  )
+    }
+}
+console.log(multiplier.multiply());

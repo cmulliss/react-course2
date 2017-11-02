@@ -1,22 +1,54 @@
 'use strict';
 
-// arguments object no longer bound with arrow functions
-var add = function add(a, b) {
-    //   console.log(arguments);
-    return a + b;
-};
-console.log(add(55, 1));
+console.log('App.js is running');
 
-// this keyword no longer bound with arrow functions
-var user = {
-    name: 'Motley',
-    cities: ['Bristol', 'Wells', 'St Davids'],
-    printPlacesVisited: function printPlacesVisited() {
-        var _this = this;
-
-        return this.cities.map(function (city) {
-            return _this.name + ' has visited ' + city + '!';
-        });
-    }
+var app = {
+    title: 'Indecision App',
+    subTitle: 'Put your life in the hands of a computer',
+    options: ['One', 'Two']
 };
-console.log(user.printPlacesVisited());
+var template = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        app.title
+    ),
+    app.subtitle && React.createElement(
+        'p',
+        null,
+        app.subtitle
+    ),
+    React.createElement(
+        'p',
+        null,
+        app.options.length > 0 ? 'Here are your options' : 'No options'
+    ),
+    React.createElement(
+        'ol',
+        null,
+        React.createElement(
+            'li',
+            null,
+            'Item One'
+        ),
+        React.createElement(
+            'li',
+            null,
+            'Item Two'
+        )
+    ),
+    React.createElement(
+        'form',
+        null,
+        React.createElement('input', { type: 'text', name: 'option' }),
+        React.createElement(
+            'button',
+            null,
+            'Add Option'
+        )
+    )
+);
+var appRoot = document.getElementById('app');
+ReactDOM.render(template, appRoot);
